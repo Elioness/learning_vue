@@ -1,0 +1,40 @@
+<!-- What is a component?
+    - components are used to cluster or segragate one chunk of "function" or in laymans term a usage that is used in the app.
+    One good things about encapsulating it in a component is that it is reusable and could be called accros the app
+    - Advantages:
+        * among all the others there are 2 main hidden advantage. First, is that it makes the DOM snappy, components are separated,
+        so instead of re-rendering a big chunk of data, it focuses on the component. Second, the classes stays inside the component,
+        so for CSS in styling, class names will be prevented to clash
+
+    Components Syntax
+    - One thing to note on is that data in here is a function that is called. 
+
+    Slots and Named Slots 
+    - Enables me to write a string inside the component, in the template, to render it out, it will look like this:
+    - <slot></slot>
+    - it can also be named, see example in pt 2 practice, slots
+
+    Props
+    - This is another way to populate data inside the components
+    - It is used inside the Vue.component as props: [] where it can take 
+    data that is inside the component itself. 
+        * one weird thing is, props will only accept camelCase, but inside the
+        renedered component, I need to use not-camel-case
+        * ex
+         <div id="app" class="bg-blue-200 w-full h-screen ">
+            <title-text user-id="456" :link="{ title: 'Home', link: '#home' }"></title-text>
+        </div>
+        
+        <script>
+            Vue.component('title-text', {
+                template: '<div>{{ link.title }}</div>', 
+                
+                props: ['userId', 'link']
+            });
+    
+    
+
+
+
+
+-->
